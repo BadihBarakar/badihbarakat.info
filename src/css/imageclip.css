@@ -1,0 +1,39 @@
+.clip-circle {
+    clip-path: circle(40% at 100px, 50px);
+    /* OLD VALUE example: circle(245px, 140px, 50px); */
+    /* Yep, even the new clip-path has deprecated stuff. */
+  }
+  
+  .clip-polygon {
+    clip-path: polygon(5% 5%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+    /* Note that percentages work as well as px */
+  }
+  
+  .clip-ellipse {
+    clip-path: ellipse(50% 50% at center);
+    /* OLD VALUE example: ellipse(245px, 80px, 75px, 30px); */
+  }
+
+  .clip-circle-at {
+    clip-path: circle(65px at 75px 70px);
+  }
+
+  .clip-filter {
+    filter: drop-shadow(7px 7px 3px rgba(0,0,0,0.6))
+ }
+
+ .separator-embose {
+  filter: drop-shadow(1px 1px 2px rgba(255,255,255,1))
+}
+
+.name-embose {
+  filter: drop-shadow(3px 2px 1px rgba(100,100,255,1))
+}
+
+.flipV {
+  transition: transform 2s ease-in-out;
+}
+
+.flipV:hover {
+  transform: rotateY(360deg);
+}

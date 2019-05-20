@@ -1,0 +1,49 @@
+.flexrow {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0.5em;
+  /* min-height: 10vh; */
+}
+.flexcol {
+  display: flex;
+  flex-direction: column;
+}
+.citem {
+  flex: 1;
+  border-radius: 5px;
+  background-color: white;    /* <-- just for demonstration */
+}
+
+.i1 {
+  flex: 1;
+  color: white;
+  font-size: 3vh;
+  text-shadow: 2px 2px 2px blue;
+  font-weight: normal;
+}
+
+.i2 {
+  flex: 2;
+  color: blue;
+  font-size: 3vh;
+  font-weight: 900;
+  text-shadow: 2px 2px 2px white;
+  /* font-weight: normal; */
+}
+
+.i3 { 
+  flex: 7;
+  color: blue;
+  font-weight: normal;
+}
+
+.styled {
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 2px blue;
+}
+
+.bolded {
+  font-weight: bold;
+}
+

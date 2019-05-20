@@ -1,0 +1,64 @@
+.body-contents {
+    margin-top: 2vh; 
+    height: auto;
+    padding: 0;
+    width: 100%;
+}
+
+.skills-block {
+    width: 100%;
+    min-height: 70vh;
+    padding: 2vh;
+}
+
+.menu-block {
+    /* width: 100%; */
+    min-height: 70vh;
+    /* padding-right: 4.5vh; */
+    padding: 0 2vw 0 0;
+    
+    filter: drop-shadow(10px 10px 3px rgba(255,255,255,0.5))
+}
+
+.inner-div {
+    width: 100%;
+    background-color: rgba(200, 200, 255, 0.5);
+    min-height: 70vh;
+    padding: 2vw;
+    border-radius: 8px;
+    overflow: auto;    
+}
+
+.inner-div:hover {
+    filter: drop-shadow(10px 10px 3px rgba(255,255,255,0.5))
+}
+
+.details-block {
+    height: auto;
+    width: 100%;
+    /* background-color: rgba(235, 235, 255, 0.5); */
+    background: linear-gradient(45deg,
+        rgba(205, 205, 255, 0.5) 35%, 
+        rgba(255, 255, 255, 0.7) 45%, 
+        rgba(205, 205, 255, 0.5) 65%);
+    padding: 2vh;
+    border-radius: 8px;
+    /* overflow: auto; */
+}
+
+.details-block:hover {
+    filter: drop-shadow(10px 10px 3px rgba(255,255,255,0.3))
+}
+
+.block-embose {
+    
+}
+
+.text-embose {
+    filter: drop-shadow(2px 2px 1px rgba(145,100,3,0.5))
+}
+
+.tblHeader {
+    font-weight: bold;
+    filter: drop-shadow(1px 1px 1px rgba(250,250,255,1))
+}

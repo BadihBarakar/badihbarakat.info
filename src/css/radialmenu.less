@@ -1,0 +1,225 @@
+@iterations: 6;
+@mbTop: 45vh;
+@mbLeft: -25px;
+@mbPosition: fixed;
+@distribScale: 180/@iterations;
+@hcWidth: 160px;
+@hcHeight: 320px;
+@hcPosition: -135px;
+  
+#chkInput2 {
+  display: none;
+}
+
+.rmMenubtn {
+  display: block;
+  text-align: left;
+  font-weight: 900;
+  font-size: 14px;
+  padding-left: 15px;
+  text-shadow: 2px 2px 2px black;
+  color: white;
+  position: relative;
+}
+
+.rmMenubtn:hover {
+  color: white;
+  text-shadow: 4px 4px 5px blue, -4px -4px 5px blue;
+}
+
+#innerButton {
+  width: 50px;
+  height: 50px;
+  border: solid 2px blue;
+  background: radial-gradient(lightblue, blue); 
+  border-radius: 50%;
+  z-index: 99999;
+}
+
+#innerButton::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 27px;
+  width: 13px;
+  height: 12px;
+  border-top: solid 3px white;
+  border-bottom: solid 3px white;
+  transition: top 1s, left 1s, height 1s, transform 1s;
+}
+
+#innerButton::after {
+  content: "";
+  position: absolute;
+  top: 33px;
+  left: 27px;
+  width: 13px;
+  border-top: solid 3px white;
+  transition: top 1s, left 1s, transform 1s;
+}
+
+
+// #innerButton::before {
+//   content: "";
+//   position: absolute;
+//   top: 15px;
+//   left: 12px;
+//   width: 27px;
+//   height: 12px;
+//   border-top: solid 3px white;
+//   border-bottom: solid 3px white;
+//   transition: top 1s, left 1s, height 1s, transform 1s;
+// }
+
+// #innerButton::after {
+//   content: "";
+//   position: absolute;
+//   top: 33px;
+//   left: 12px;
+//   width: 27px;
+//   border-top: solid 3px white;
+//   transition: top 1s, left 1s, transform 1s;
+// }
+
+.lblMenuButton {
+  position: @mbPosition;
+  top: @mbTop;
+  left: @mbLeft;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  z-index: 99999;
+}
+
+.half-circle {
+  position: absolute;
+  left: @hcPosition;
+  top: @hcPosition;
+  width: @hcWidth;
+  height: @hcHeight;
+  background-color: rgba(150, 150, 255, 0.7);
+  box-shadow: -5px -5px 10px black, inset 0px 4px 10px black, inset 4px 0px 10px white;
+  border-bottom-left-radius: @hcWidth;
+  border-top-left-radius: @hcWidth;
+  // border: 10px solid gray;
+  border-left: 0;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  transform-origin: right center;
+  transition: transform 2s;
+  z-index: -2;
+}
+
+#chkInput2:checked ~ .half-circle {
+  transform-origin: right center;
+  transform: rotate(180deg);
+  transition-delay: 3s;
+  transition: transform 2s;
+}
+
+
+.rmItems li{
+  list-style: none;
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  width: 200px;
+  color: blue;
+  font-size: 1.25em;
+  visibility: hidden;
+  opacity: 0;
+  cursor: pointer;
+  transition: visibility 0.5s, opacity 0.5s, transform 0.5s;
+  z-index: -2;
+  text-shadow: 0px 0px 4px white;
+  
+}
+
+
+.rmItems li:hover {
+  font-weight: bold;
+  text-shadow: 0px 0px 4px white;
+}
+
+#chkInput2:checked ~ #innerButton::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 30px;
+  width: 15px;
+  height: 0px;
+  transform-origin: 0;
+  transform: rotate(45deg);
+  border-top: solid 3px white;
+  border-bottom: solid 3px white;
+  border-bottom: none;
+  transition: top 1s, left 1s, height 1s, transform 1s;
+}
+
+#chkInput2:checked ~ #innerButton::after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 15px;
+  transform-origin: left center;
+  transform: rotate(-45deg);
+  border-top: solid 3px white;
+  transition: top 1s, left 1s, transform 1s;
+}
+
+
+// #chkInput2:checked ~ #innerButton::before {
+//   content: "";
+//   position: absolute;
+//   top: 14px;
+//   left: 15px;
+//   width: 30px;
+//   height: 0px;
+//   transform-origin: 0;
+//   transform: rotate(45deg);
+//   border-top: solid 3px white;
+//   border-bottom: solid 3px white;
+//   border-bottom: none;
+//   transition: top 1s, left 1s, height 1s, transform 1s;
+// }
+
+// #chkInput2:checked ~ #innerButton::after {
+//   content: "";
+//   position: absolute;
+//   top: 35px;
+//   left: 15px;
+//   width: 30px;
+//   transform-origin: left center;
+//   transform: rotate(-45deg);
+//   border-top: solid 3px white;
+//   transition: top 1s, left 1s, transform 1s;
+// }
+
+.mixin-loop (@i) when (@i > 0) {
+  .rmItems li:nth-child(@{i}) {
+    transform-origin: 0;
+    transform: rotate((@distribScale * (@i - 1)) + @distribScale / 2 - 90deg) ; 
+    // transition-delay: (@i * 0.3s);
+  }
+  .mixin-loop(@i - 1);
+}
+.mixin-loop(@iterations);
+
+.click-loop (@i) when (@i > 0) {
+  #chkInput2:checked ~ .rmItems li:nth-child(@{i}) {
+    visibility: visible;
+    opacity: 1;
+    transform-origin: 0;
+    transform: rotate((@distribScale * (@i - 1)) + @distribScale /2 - 90deg) translate(20px);
+    transition-delay: (@i * 0.3s); 
+    // transition: opacity 1s, transform 1s;
+  }
+  .click-loop(@i - 1);
+} 
+.click-loop(@iterations);
+

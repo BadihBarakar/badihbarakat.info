@@ -1,0 +1,90 @@
+$items: 12;
+$row-items: 3;
+$item-height: 40vh;
+$item-width: 30%;
+$spacing: 5vh;
+$containter-height: ($item-height * ($items / $row-items)) + ((($items / $row-items) - 1) * $spacing);
+
+$content-speed: 2s;
+$item-drop-speed: 1s; 
+
+.slider-container {
+    width: 75vw;
+    height: $containter-height;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+  
+.slider-divs-row {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    font-size: 2vw;
+    justify-content: space-between;
+}
+
+.slide-div-item {
+    width: $item-width;
+    // height: $containter-height / (($items / $row-items) + 0.5);
+    height: $item-height;
+    border-radius: 15px;
+    position: relative;
+    // background: linear-gradient(to bottom right,lightgray, white 40%, lightblue 55%, white 60%, lightgray );
+    background: rgb(100, 160, 255);
+    box-shadow: 0 0 7px black;
+    font-size: 1.25em;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    animation: scroll-down $item-drop-speed 1;
+}
+
+@keyframes scroll-down {
+    0% {
+    height: 0;
+    }
+    100% {
+    // height: $containter-height / (($items / $row-items) + 0.5);
+    height: $item-height;
+    }
+}
+  
+.slide-div-content {
+    border-radius: 15px;
+    border: 1px solid lightgray;
+    visibility: hidden;
+    opacity: 0;
+
+    position: absolute;
+    height: 0;
+    width: 100%;
+    bottom: 0;
+    
+    font-size: 18px;
+    color: blue;
+    overflow-wrap: normal;
+    text-align: left;
+    line-height: 2.5em;
+    /* padding: 10%; */
+    background: white;
+    overflow: hidden;
+    transition: height $content-speed, opacity $content-speed, visibility $content-speed;
+}
+  
+.slide-div-item:hover .slide-div-content {
+    visibility: visible;
+    opacity: 1;
+  /*   top: 0; */
+    height: 100%;  
+}
+
+.slide-div-content p {
+    margin: 1vw;
+}

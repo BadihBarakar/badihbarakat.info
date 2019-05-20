@@ -1,0 +1,24 @@
+.first-letter::first-letter {
+    font-size: 9vh;
+    /* display: inline-block; */
+    float: left;
+    line-height: 7vh;
+    margin-right: 1vh;
+    font-weight: bold;
+    color: lightblue;
+    text-shadow: 5px 5px 3px blue;
+}
+
+
+.justy-p {
+    text-align: justify;
+}
+
+.first-letter {
+    text-align: justify;
+}
+
+/* .textFormat {
+    font-size: 22px;
+    font-weight: bold;
+} */

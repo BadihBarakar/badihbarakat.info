@@ -1,0 +1,124 @@
+.social-button {
+    position: fixed;
+    right: 0;
+    top: 45vh;
+    display: inline-block;
+    width: 40px;
+    height: 9vh;
+    background: red;
+    border-top-left-radius: 160px;
+    border-bottom-left-radius: 160px;
+    z-index: 99999;
+
+    line-height: 9vh;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    background-image: linear-gradient(blue, #38A1F3, purple);
+    transition: box-shadow 1s;
+}
+
+.vFlipped {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+ 
+/* .social-button::before {
+    content: "\f007";
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    display: inline-block;
+    width: 30px;
+    height: 60px;
+    background: red;
+    border-top-left-radius: 120px;
+    border-bottom-left-radius: 120px;
+    position: absolute;
+    top: 0;
+    left: -100;
+    z-index: 9999;
+} */
+
+.facebook-button {
+    width: 50px;
+    height: 50px;
+    background: blue;
+    border-radius: 50%;
+    position: fixed;
+    right: -30px;
+    top: 45%;
+    line-height: 50px;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    visibility: visible;
+    transition: right 1s, top 1s, visibility 1s, opacity 1s ;
+    box-shadow: 5px 5px 5px black;
+    -webkit-box-shadow: 5px 5px 5px black;
+    transition-timing-function: ease-in-out;
+    z-index: 0;
+}
+    
+.twitter-button {
+    width: 50px;
+    height: 50px;
+    background: #38A1F3;
+    border-radius: 50%;
+    position: fixed;
+    right: -30px;
+    top: 45%;
+    line-height: 50px;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    visibility: visible;
+    transition: right 1s, top 1s, visibility 1s, opacity 1s ;
+    box-shadow: 5px 5px 5px black;
+    -webkit-box-shadow: 5px 5px 5px black;
+    z-index: 0;
+}
+    
+.instagram-button {
+    width: 50px;
+    height: 50px;
+    background-image: linear-gradient(#fb3958, #ffc838, #6dc993, #458eff, #ded1c1, #9b6954, #125688);
+    border-radius: 50%;
+    position: fixed;
+    right: -30px;
+    top: 45%;
+    line-height: 50px;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    visibility: visible;
+    transition: right 1s, top 1s, visibility 1s, opacity 1s ;
+    box-shadow: 5px 5px 5px black;
+    -webkit-box-shadow: 5px 5px 5px black;
+    z-index: 0;
+}
+.social-button:hover {
+  box-shadow: 0px 0px 15px 10px white;
+}
+
+.social-button:hover .facebook-button {
+  right: 60px;
+  top: 35vh; 
+  opacity: 1;
+}
+
+.social-button:hover .twitter-button {
+  right: 60px;
+  top: 45vh; 
+  opacity: 1;
+}
+
+.social-button:hover .instagram-button {
+  right: 60px;
+  top: 55vh; 
+  opacity: 1;
+}

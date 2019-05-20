@@ -1,0 +1,152 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+.middle {
+    position: relative;
+    /* top: 50px;
+    left: 50px; */
+    /* transform: translate(-50%, -50%); */
+}
+
+.menu {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden
+}
+
+.item {
+    border-top: 1px solid #1e8bc3;
+    overflow: hidden
+}
+
+.menubtn {
+    display: block;
+    text-align: left;
+    font-weight: 900;
+    font-size: 16px;
+    font-size: 1vw;
+    padding: 16px 20px;
+    /* background: #1e6bc3; */
+    color: white;
+    position: relative;
+}
+
+.rolldownmenu-list li:nth-child(2n) {
+    background-color: rgb(80, 109, 228);
+    
+  }
+  
+.rolldownmenu-list li:nth-child(2n+1) {
+    background-color: rgb(20, 59, 228);
+}
+
+.rolldownmenu-list li:nth-child(2n) .menubtn::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: rgb(80, 109, 228);
+    left: 20px;
+    bottom: -7px;
+    transform: rotate(45deg);
+    
+  }
+  
+.rolldownmenu-list li:nth-child(2n+1) .menubtn::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: rgb(20, 59, 228);
+    left: 20px;
+    bottom: -7px;
+    transform: rotate(45deg);
+}
+
+.rolldownmenu-list li:nth-child(2n) .smenu a::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: 0.3s;
+    opacity: 0;
+    background: rgb(80, 109, 228);
+    
+  }
+  
+.rolldownmenu-list li:nth-child(2n+1) .smenu a::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: 1s;
+    opacity: 0;
+    background: rgb(20, 59, 228);
+    
+}
+
+/* .smenu a::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background:  #1e8bc3;
+    left: 0;
+    top: 0;
+    transition: 0.3s;
+    opacity: 0
+} */
+
+
+/* 
+.btn::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #1e6bc3;
+    left: 20px;
+    bottom: -7px;
+    transform: rotate(45deg);
+} */
+
+.menubtn:hover {
+    color: #ddd;
+    font-style: italic
+}
+
+.menubtn i {
+    margin-right: 10px
+}
+
+.smenu {
+    background: #c5eff7;
+    overflow: hidden;
+    transition: max-height 0.3s;
+    max-height: 0
+}
+
+.smenu a {
+    display: block;
+    padding: 16px 26px;
+    color: blue;
+    font-size: 1vw;
+    margin: 4px 0;
+    position: relative;
+}
+
+.smenu a:hover::before {
+    opacity: 1;
+}
+
+.item:hover .smenu {
+    max-height: 13em;
+}
