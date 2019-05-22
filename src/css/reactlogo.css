@@ -1,7 +1,7 @@
 #logo-container {
     position: absolute;
     top: -20px;
-    left: -15px;
+    left: -15px;    
 }
 
 .react-logo {
@@ -32,3 +32,18 @@
     }
 }
   
+@media screen and (max-width: 600px) {
+    #logo-container {
+        position: inherit;
+        min-height: 15vh;
+        justify-content: center;
+    }
+
+    .react-logo {
+        width: 100%;
+    }
+
+    .react-logo-sh {
+        width: 100%;
+    }
+}

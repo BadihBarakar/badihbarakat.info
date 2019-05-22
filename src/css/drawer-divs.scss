@@ -1,16 +1,17 @@
-$items: 12;
+$items: 15;
 $row-items: 3;
 $item-height: 40vh;
 $item-width: 30%;
 $spacing: 5vh;
+$container-width: 100%;
 $containter-height: ($item-height * ($items / $row-items)) + ((($items / $row-items) - 1) * $spacing);
 
 $content-speed: 2s;
 $item-drop-speed: 1s; 
 
 .slider-container {
-    width: 75vw;
-    height: $containter-height;
+    width: $container-width;
+    // height: $containter-height;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -45,6 +46,52 @@ $item-drop-speed: 1s;
     align-items: center;
     animation: scroll-down $item-drop-speed 1;
 }
+
+@media screen and (min-width: 600px) {
+    $containter-height: ($item-height * ($items / $row-items)) + ((($items / $row-items) - 1) * $spacing);
+
+    .slider-container {
+        height: $containter-height;  
+        
+    }
+
+    .slide-div-item {
+        width: $item-width;
+    }
+         
+}
+
+@media screen and (max-width: 600px)
+{
+    $row-height: ($item-height * $row-items) + (($row-items - 1) * $spacing);
+    $rows: $items / $row-items;
+    // (row-height * rows) + ((rows - 1) * spacing
+    $containter-height: ($row-height * $rows) + ($spacing * ($rows - 1));
+
+    .slider-container {
+        height: $containter-height;
+    }
+
+    .slider-divs-row {
+        height: $row-height;
+        flex-direction: column;
+    }
+
+    @for $i from 1 through ($rows - 1)
+    {
+        .slider-divs-row:nth-child(#{$i}) {
+            margin-bottom: $spacing;
+        }
+    }
+
+    .slide-div-item {
+        width: 100%;
+
+    }
+
+} 
+
+
 
 @keyframes scroll-down {
     0% {

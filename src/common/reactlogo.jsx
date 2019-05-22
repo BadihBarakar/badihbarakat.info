@@ -7,8 +7,8 @@ class ReactLogo extends Component {
    render() {
       return (
         <div id="logo-container">
-            <img src={logo} class="react-logo"/>
-            <img src={logo} class="react-logo-sh"/>
+            <img src={logo} className="react-logo"/>
+            <img src={logo} className="react-logo-sh"/>
         </div>
       );
    }

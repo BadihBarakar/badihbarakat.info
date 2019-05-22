@@ -1,0 +1,77 @@
+[
+    {
+        "skill": "Project Management",
+        "stars": 4,
+        "description": "Managed Software Development projects of various scales using Agile Scrum methodology. Lead teams of 3-5 developers." 
+    },
+    {
+        "skill": "Agile SW Development",
+        "stars": 4,
+        "description": "Implemented Agile Scrum Methodology and tools to manage Software Development Projects."
+    },
+    {
+        "skill": "React.js",
+        "stars": 4,
+        "description": "React apps provids excellent UI/UX. Developed Web Apps using in React such as a Facility Management Application and a facility Client Portal, as well as interactive websites."
+    },
+    {
+        "skill": "React Native",
+        "stars": 4,
+        "description": "I adopted React Native as a platform for robust and rappid mobile apps development. It provides the simplicity of web apps development with most of the mobile apps capabilities. I develop for both, Android and iOS."
+    },
+    {
+        "skill": "Angular",
+        "stars": 3,
+        "description": "As a popular framework for JS development, I learned Angular and used it to develop some of the small scale web apps."
+    },
+    {
+        "skill": "RESTful API",
+        "stars": 5,
+        "description": "Almost all web apps need to interact and interface with databases. I, often, develop such API's myself as RESTFul (CRUD) API's."
+    },
+    {
+        "skill": "HTML5",
+        "stars": 5,
+        "description": "Web apps or websites. They all need HTML!"
+    },
+    {
+        "skill": "CSS3, SASS / SCSS",
+        "stars": 5,
+        "description": "Great knowledge of Cascade Style Sheets and their interpriters. Animations and Styling of User Interface component for creative and appealing interfaces."
+    },
+    {
+        "skill": "JavaScript / TypeScript & Ajax",
+        "stars": 5,
+        "description": "JS is the core of a successful Website or Web App, as well as of React, React Native, Angular, and so many others. My knowledge covers JS from the basics up to the latest ES6."
+    },
+    {
+        "skill": "PHP7",
+        "stars": 5,
+        "description": "I have developed a large scale, Maintenance and Technical Support Helpdesk using PHP7. The application was developed using basic HTML5, CSS, JavaScripts for front-end UI, and PHP7 for data handling and processing. PHP7 PDO was used for datasaving and retrieving from MySQL database."
+    },
+    {
+        "skill": "Node.js",
+        "stars": 4,
+        "description": "I, mainly, use Node.js for library packages management through the use of npm and yarn to add and install libraries."
+    },
+    {
+        "skill": "Git & Github",
+        "stars": 4,
+        "description": "Some of my Projects are maitained as repositories on Github.com. I manage these repositories via Git Bash command line."
+    },
+    {
+        "skill": "jQuery",
+        "stars": 4,
+        "description": "I use jQuery in most of my projects to gain more control on DOM elements as jQuery provides better element selectors options and elements attributes manipulation."
+    },
+    {
+        "skill": "Database Administration & Data Modeling",
+        "stars": 5,
+        "description": "Developed application which connected with MS-SQL, Oracle, MySQL, mongoDB, as well as google firebase."
+    },
+    {
+        "skill": "ASP.NET (C#)",
+        "stars": 4,
+        "description": "Few of my projects were developed in ASP.NET (C#). These apps connected with MS-SQL databased and some used Google Firebase Database."
+    }
+]

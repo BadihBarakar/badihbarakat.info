@@ -22,3 +22,31 @@
     font-size: 22px;
     font-weight: bold;
 } */
+
+.react-app-site {
+    display: flex; 
+    flex: 1;
+    margin-bottom: 25px; 
+}
+
+.logo-div {
+    flex: 1;
+}
+
+.react-desc {
+    flex: 9;
+}
+
+@media screen and (max-width: 600px) {
+    .react-app-site {
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .logo-div {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}

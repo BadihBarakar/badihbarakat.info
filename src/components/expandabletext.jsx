@@ -41,7 +41,7 @@ class ExpandableText extends Component {
                     })
                 }
                 <FontAwesomeIcon icon={faHandPointLeft} 
-                    style={{fontSize: "1vw", color: "lightbluered"}} />
+                    className="point-finger" />
                 
             </div>
         );

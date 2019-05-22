@@ -6,6 +6,7 @@ class DrawerDiv extends Component {
         const { mainText, innerText } = this.props; 
         return (
             <div class="slide-div-item">
+                {/* style={{width: this.props.width, height: this.props.itemHeight}}> */}
                 {mainText}
                 <div class="slide-div-content">
                     <p>{innerText}</p>

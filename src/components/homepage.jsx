@@ -23,12 +23,11 @@ class HomePage extends Component {
                   </div>
                 </li>
                 <li>
-                  <div  className="textFormat" 
-                        style={{ display: "flex", marginBottom: "25px" }}>
-                    <div style={{flex: 1}}>
+                  <div  className="textFormat react-app-site" >
+                    <div className="logo-div">
                       <ReactLogo />
                     </div>
-                    <div style={{flex: 9}}>
+                    <div className="react-desc">
                       This site is a React.js web app.
                     </div>
                   </div>

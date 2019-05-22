@@ -14,9 +14,9 @@
     justify-content: center;
 }
 .extDivMiddle {
-    width: 100%;
+    /* width: 100%; */
     display: flex;
-    
+    justify-content: flex-end;
 }
 .expText {
     color: white;
@@ -25,6 +25,7 @@
     font-weight: 900;
     cursor: pointer;
 }
+
 .extHidden {
     max-width: 0;
     opacity: 0;
@@ -46,4 +47,28 @@
 .expTextUnStyled:hover .extHidden {
     opacity: 1;
     max-width: 1em;
+}
+
+.point-finger {
+    font-size: 1vw;
+    color: white;
+    float: right;
+}
+
+@media screen and (max-width: 600px) {
+    .extDivMiddle {
+        justify-content: center;
+    }
+
+    .expText {
+        font-size: 5vw;
+    }
+
+    .expTextUnStyled {
+        font-size: 5vw;
+    }
+
+    .point-finger {
+        font-size: 3vw;
+    }
 }
